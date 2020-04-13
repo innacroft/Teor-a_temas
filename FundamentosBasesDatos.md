@@ -1,49 +1,49 @@
-#Bases de datos relacionales
+# Bases de datos relacionales
 Una base de datos relacional es un tipo de base de datos que almacena y proporciona acceso a puntos de datos relacionados entre sí. Las bases de datos relacionales se basan en el modelo relacional: una forma intuitiva y directa de representar datos en tablas. 
 
 - Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
 
-##Conceptos 
+## Conceptos 
 - Entidad: Una entidad es un objeto, es la representación de algo en el mundo real.
-######Ej: Computadora 💻
+###### Ej: Computadora 💻
 
 - Atributo: conjunto de características que tiene una entidad.
-######Ej: Para la entidad  computadora 💻, los atributos pueden ser:
+###### Ej: Para la entidad  computadora 💻, los atributos pueden ser:
 ###### - Color 
 ###### - Año
 ###### - Modelo
 ###### - Disco duro
 ###### - Número de serie
 - Relación: Manera en que se vinculan las entidades y están definidas por verbos, por ejemplo
-######Ej: Computadora 💻 TIENE Disco duro💽
+###### Ej: Computadora 💻 TIENE Disco duro💽
 
-##Tipos de atributos llave
+## Tipos de atributos llave
 - Atributos llave naturales: es el atributo ihnerente al objeto, esto quiere decir que es propio del objeto, como un identificador.
-######Ej: número de serie, isbn en libros.
+###### Ej: número de serie, isbn en libros.
 - Atributos de llave artificiales: no son inherentes , no son naturales del objeto, son propiedades que se le asignan.
-######Ej: al asignar un contador incremental a una lista de objetos y usarlos como identificador único.
+###### Ej: al asignar un contador incremental a una lista de objetos y usarlos como identificador único.
 ##Tipos de entidades
 - Entidades débiles: no pueden existir sin las entidades fuertes.
 	- Entidades débiles por identidad: no pueden existir sin las entidades fuertes.
 	- Entidades débiles por existencia: asigna clave propia pero va a depender de la fuerte.
 - Entidades fuertes: son entidades que existen por si solas.
-##Tipos de relaciones entre entidades
+## Tipos de relaciones entre entidades
 - Uno a uno (1:1) :
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/1_1.PNG)
 - Cero a uno (0:1) :
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/0_0.PNG)
 - Uno a muchos (1:n) :
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/1_n.PNG)
 - Cero a muchos (0:n) :
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/0_n.PNG)
 - Muchos a muchos (n:n) :
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-##Diagrama entidad relacion
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/n_n.PNG)
+## Diagrama entidad relacion
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/ER.png)
 
 
 
-##Tipos de datos:
+## Tipos de datos:
 
  TEXTO :
 > CHAR --> cadenas alfanuméricas de longitud  fija.
