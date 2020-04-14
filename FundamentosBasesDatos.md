@@ -97,8 +97,33 @@ Es el lenguaje que permite manipular los datos en una base de datos.
 - INSERT: inserta o agrega una region en la base de datos.
 - UPDATE: permite actualizar o editar datos.
 - DELETE: permite eliminar datos.
-> ⚠️ Se debe tener mucha precaución cuando se utiliza este comando, ya que podría eliminar datos o tablas de manera permanente. ⚠️
+> ⚠️⚠️⚠️ Se debe tener mucha precaución cuando se utiliza este comando, ya que podría eliminar datos o tablas de manera permanente. 
 - SELECT: permite traer información de la base de datos.
 
+## Consultas o Querys
 
+Una vez planteada una buena estructura de la base de datos, y después de haber suministrado datos a la base de datos, las consultas son parte fundamental de las bases de datos, ya que permiten son un tipo de sentencias que permiten extraer los datos y convertirlos en información útil.
+De nada sirve tener un montón de registros y no poder hacer nada con ellos. 
+
+
+Existen algunos tipos de operaciones que permiten traer diferentes tablas cuando lo deseamos, existen varios tipos de operaciones,algunas son las siguientes:
+
+
+## WHERE
+Esta es una de las consultas más básicas y permiten traer información dependiendo de la condición dada
+###### Ej: tabla números : número del 1 al 40, para cada número hay un nombre de una persona asignado.
+###### Deseo traer el nombre de la persona que corresponde al número 3.
+###### La sentencia sería:
+###### SELECT name FROM NUMEROS WHERE num=3 ;
+###### Lo anterior retornaría el nombre de la persona con el numero 3 de la tabla 
+
+------------------------------------------------------------------------
+
+Teniendo en cuenta este diagrama: ![](https://github.com/innacroft/Teoria_temas/blob/master/images/usr_post.png)
+Cuando se necesita traer información de dos o más tablas distintas pero que poseen una relación en el caso anterior de usuario con post , pueden usarsen algunas de las siguientes operaciones:
+### JOIN
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/conjuntos_.png)
+
+### ORDER BY
+Este tipo de comandos permiten agrupar objetos , ordenarlos alfabéticamente o numéricamente o agregar algún tipo de filtro.
 
