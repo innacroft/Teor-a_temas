@@ -120,8 +120,8 @@ Esta es una de las consultas más básicas y permiten traer información dependi
 ###### Lo anterior retornaría el nombre de la persona con el numero 3 de la tabla 
 
 ### ORDER BY
+
 Este tipo de comandos permiten agrupar objetos , ordenarlos alfabéticamente o numéricamente o agregar algún tipo de filtro.
-------------------------------------------------------------------------
 
 Teniendo en cuenta este diagrama: 
 
