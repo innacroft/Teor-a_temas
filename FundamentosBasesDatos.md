@@ -22,7 +22,7 @@ Una base de datos relacional es un tipo de base de datos que almacena y proporci
 ###### Ej: número de serie, isbn en libros.
 - Atributos de llave artificiales: no son inherentes , no son naturales del objeto, son propiedades que se le asignan.
 ###### Ej: al asignar un contador incremental a una lista de objetos y usarlos como identificador único.
-##Tipos de entidades
+## Tipos de entidades
 - Entidades débiles: no pueden existir sin las entidades fuertes.
 	- Entidades débiles por identidad: no pueden existir sin las entidades fuertes.
 	- Entidades débiles por existencia: asigna clave propia pero va a depender de la fuerte.
@@ -38,9 +38,9 @@ Una base de datos relacional es un tipo de base de datos que almacena y proporci
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/0_n.PNG)
 - Muchos a muchos (n:n) :
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/n_n.PNG)
-## Diagrama entidad relacion
-![](https://github.com/innacroft/Teoria_temas/blob/master/images/ER.png)
 
+## Diagrama entidad relacion (ERD)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/ER.png)
 
 
 ## Tipos de datos:
@@ -65,5 +65,40 @@ FECHA:
 
 LOGICOS
 >BOOLEAN --> Tipo de dato que puede tener sólo dos estados TRUE y FALSE
+
+## Restricciones bases de datos
+- NOT NULL : no se aceptan valores nulos.
+- UNIQUE : los valores deben ser únicos.
+- PRIMARY KEY: la llave primaria debe ser no ser nula y debe ser única.
+- FOREIGN KEY: la llave foránea debe no ser nula y debe ser única.
+- CHECK: asegura que el valor de una columna cumpla una condición.
+- DEFAULT: coloca un valor por defecto si este no tiene un valor especificado.
+- INDEX: se crea por columnas para permitir búsquedas rápidas 
+Por lo anterior, existe la normalización: 
+
+## Normalización
+La normalización es poner una tabla de forma normal, sin datos duplicados ni uniones extrañas.
+- FN : Forma normal.
+- 1FN : Elimina los datos duplicados,una tabla no puede tener dos campos iguales. 
+- 2FN : Además de cumplir la anterior, se cumple que todos los datos de una tabla que no son clave principal sólo dependen de una clave principal. Nunca habrá dos claves principales en una tabla.
+- 3FN : Además de cumplir loas dos anteriores, se cumple que: sólo los campos claves tienen dependencias. Una tabla no puede depender de otra por un campo que no sea clave.
+- 4FN : Cumple todos los anteriores y además: los campos multi-evaluados tienen una sola clave única.
+
+
+## Lenguaje de definición de datos (DDL)
+Son sentencias que ayudan a  crear  y modificar la estructura de la base de datos.
+- CREATE: Crea objetos de la base de datos 
+- ALTER (ADD, ALTER): modifica tablas de la base de datos.
+- DROP: elimina objetos de la base de datos.
+- TRUNCATE: elimina registos de la tabla de la base de datos.
+
+## Lenguaje de manipulaciónde datos (DML)
+Es el lenguaje que permite manipular los datos en una base de datos.
+- INSERT: inserta o agrega una region en la base de datos.
+- UPDATE: permite actualizar o editar datos.
+- DELETE: permite eliminar datos.
+> ⚠️ Se debe tener mucha precaución cuando se utiliza este comando, ya que podría eliminar datos o tablas de manera permanente. ⚠️
+- SELECT: permite traer información de la base de datos.
+
 
 
