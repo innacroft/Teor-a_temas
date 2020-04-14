@@ -131,5 +131,23 @@ Cuando se necesita traer información de dos o más tablas distintas pero que po
 ### JOIN
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/conjuntos_.png)
 
+Lo anterior es mucha teoría que puede ser engorrosa, entonces...
+## ¿Cómo realizar un Join?
+Teniendo en cuenta la siguiente estructura 
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/diagrama_transactions.png)
+###### Las tablas anteriores corresponden a una base de datos para una librería, la tabla de transacciones corresponden al estado del libro si es ###### prestado o vendido, se desea realizar una consulta que me traiga el nombre del cliente(tabla clients), el titulo del libro(tabla books) y el ###### tipo de transacción(tabla transactions). 
+
+1.Usar como pivote la tabla principal que sería la tabla transactions, es principal porque es de allí donde las demás tablas se relacionan.
+2.Relacionar las tablas book y client con transactions, para ello usaremos los *ALIAS*, en este caso son los  *as* y los *on* para unir las tablas,así:
+*SELECT*
+*FROM TRANSACTIONS AS T*
+*JOIN BOOKS AS B*
+*ON T.BOOK_ID = B.BOOK_ID*
+*JOIN CLIENTS AS C*
+*ON T.CLIENT_ID = C.CLIENT_ID*
+
+
+
+
 
 
