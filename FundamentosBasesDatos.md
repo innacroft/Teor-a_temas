@@ -105,9 +105,11 @@ Es el lenguaje que permite manipular los datos en una base de datos.
 Una vez planteada una buena estructura de la base de datos, y después de haber suministrado datos a la base de datos, las consultas son parte fundamental de las bases de datos, ya que permiten son un tipo de sentencias que permiten extraer los datos y convertirlos en información útil.
 De nada sirve tener un montón de registros y no poder hacer nada con ellos. 
 
+La estructura básica de un Query es la siguiente
+SELECT dato FROM tabla; 
 
-Existen algunos tipos de operaciones que permiten traer diferentes tablas cuando lo deseamos, existen varios tipos de operaciones,algunas son las siguientes:
-
+## Filtros
+La estructura básica de un Query traerá toda la información de la columna dato de la tabla, pero necesitaremos aplicar algún tipo de *FILTRO*, para que la información obtenida sea  la que se desea, y también se puede ordenar para que la información se muestre como se desea también. A continuación se muestra como 
 
 ## WHERE
 Esta es una de las consultas más básicas y permiten traer información dependiendo de la condición dada
@@ -117,13 +119,17 @@ Esta es una de las consultas más básicas y permiten traer información dependi
 ###### SELECT name FROM NUMEROS WHERE num=3 ;
 ###### Lo anterior retornaría el nombre de la persona con el numero 3 de la tabla 
 
+### ORDER BY
+Este tipo de comandos permiten agrupar objetos , ordenarlos alfabéticamente o numéricamente o agregar algún tipo de filtro.
 ------------------------------------------------------------------------
 
-Teniendo en cuenta este diagrama: ![](https://github.com/innacroft/Teoria_temas/blob/master/images/user.PNG)
+Teniendo en cuenta este diagrama: 
+
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/user.PNG)
+
 Cuando se necesita traer información de dos o más tablas distintas pero que poseen una relación en el caso anterior de usuario con post , pueden usarsen algunas de las siguientes operaciones:
 ### JOIN
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/conjuntos_.png)
 
-### ORDER BY
-Este tipo de comandos permiten agrupar objetos , ordenarlos alfabéticamente o numéricamente o agregar algún tipo de filtro.
+
 
