@@ -119,9 +119,20 @@ Esta es una de las consultas más básicas y permiten traer información dependi
 ###### SELECT name FROM NUMEROS WHERE num=3 ;
 ###### Lo anterior retornaría el nombre de la persona con el numero 3 de la tabla 
 
-### ORDER BY
+### OPERADORES LOGICOS Y ARITMETICOS
+Este tipo de comandos pueden funcionar para concatenar condiciones utilizando AND , OR  , NOT. 
+Puede servir para realizar comparaciones  <,>, >=, <=, IN, ANY,ALL
+También para realizar operaciones dentro de una consulta  promedio(AVG), desviacion estándar(STDDEV), máximo(MAX) , mínimo (MIN),entre otros.
 
-Este tipo de comandos permiten agrupar objetos , ordenarlos alfabéticamente o numéricamente o agregar algún tipo de filtro.
+### ORDER BY
+Este tipo de comandos permiten agrupar y/u  ordenar datos alfabéticamente o numeralmente de manera ascendente o descendente.
+
+### LIMIT
+Este limit funciona como un filtro para limitar los resultados que se desean obtener, ya sea por una característica o por una cantidad.
+
+### BETWEEN
+Este tipo de comando va justo de un where y permite buscar por intervalos
+###### Ejemplo:  SELECT * FROM posts WHERE fecha_publicacion BETWEEN 'fecha1' AND 'fecha'
 
 Teniendo en cuenta este diagrama: 
 
@@ -133,7 +144,7 @@ Cuando se necesita traer información de dos o más tablas distintas pero que po
 
 Lo anterior es mucha teoría que puede ser engorrosa, entonces...
 # ¿Cómo realizar un Join?
-Teniendo en cuenta la siguiente estructura 
+Teniendo en cuenta el siguiente esquema de una librería
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/transactions.jpg)
 ###### Las tablas anteriores corresponden a una base de datos para una librería, la tabla de transacciones corresponden al estado del libro si es ###### prestado o vendido, se desea realizar una consulta que me traiga el nombre del cliente(tabla clients), el titulo del libro(tabla books) y el ###### tipo de transacción(tabla transactions). 
 Este ejemplo es realizado con la sintaxis de MySQL, de todas maneras entre bases de datos SQL la sintaxis es semejante.
@@ -148,7 +159,7 @@ Este ejemplo es realizado con la sintaxis de MySQL, de todas maneras entre bases
 *ON T.CLIENT_ID = C.CLIENT_ID* <br>
 
 3.¿Qué datos deseo ver? *Nombre del cliente, titulo del libro, tipo de transacción*<br>
-*SELECT c.name ,b.title,t.type* <br>
+*SELECT C.name ,B.title,T.type* <br>
 *FROM TRANSACTIONS AS T* <br>
 *JOIN BOOKS AS B* <br>
 *ON T.BOOK_ID = B.BOOK_ID* <br>
@@ -157,7 +168,7 @@ Este ejemplo es realizado con la sintaxis de MySQL, de todas maneras entre bases
 
 4.¿Qué datos deseo filtrar?
 Supongamos que el dueño de la librería pidió que de la información anterior sólo se mostraran los libros vendido y vendidos a mujeres.La consulta anterior serviría pero se tendrían que agregar unos filtros al final de la sentencia:<br>
-*SELECT c.name ,b.title,t.type* <br>
+*SELECT C.name ,B.title,T.type* <br>
 *FROM TRANSACTIONS AS T* <br>
 *JOIN BOOKS AS B* <br>
 *ON T.BOOK_ID = B.BOOK_ID* <br>
@@ -165,6 +176,16 @@ Supongamos que el dueño de la librería pidió que de la información anterior 
 *ON T.CLIENT_ID = C.CLIENT_ID* <br> 
 *WHERE C.GENDER='WOMEN'*
 *AND T.TYPE IN ('SELL','LEND')*
+
+# ¿Cómo realizar un Order by?
+Teniendo en cuenta el esquema de la librería en la sección anterior.
+Supongamos que el dueño de la librería desea saber de cúales autores tiene libros en su librería actualmente, su nacionalidad, el título del libro y además ver los autores por orden alfabético, de esta manera le será más fácil encontrarlos. 
+Se deben realizar los mismos primeros 3 pasos del join y por último en lugar del filtro where, se agrega el order by, así:<br>
+*SELECT A.author_id, A.name, A.nationality, B.title* <br>
+*FROM AUTHORS AS A* <br>
+*JOIN BOOKS AS B* <br>
+*ON B.AUTHOR_ID = A.AUTHOR_ID* <br>
+*ORDER BY A.AUTHOR_ID* <br>
 
 
 
