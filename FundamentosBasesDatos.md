@@ -119,7 +119,7 @@ Esta es una de las consultas más básicas y permiten traer información dependi
 
 ------------------------------------------------------------------------
 
-Teniendo en cuenta este diagrama: ![](https://github.com/innacroft/Teoria_temas/blob/master/images/user.png)
+Teniendo en cuenta este diagrama: ![](https://github.com/innacroft/Teoria_temas/blob/master/images/user.PNG)
 Cuando se necesita traer información de dos o más tablas distintas pero que poseen una relación en el caso anterior de usuario con post , pueden usarsen algunas de las siguientes operaciones:
 ### JOIN
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/conjuntos_.png)
