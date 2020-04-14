@@ -132,12 +132,13 @@ Cuando se necesita traer información de dos o más tablas distintas pero que po
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/conjuntos_.png)
 
 Lo anterior es mucha teoría que puede ser engorrosa, entonces...
-## ¿Cómo realizar un Join?
+# ¿Cómo realizar un Join?
 Teniendo en cuenta la siguiente estructura 
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/diagrama_transactions.png)
 ###### Las tablas anteriores corresponden a una base de datos para una librería, la tabla de transacciones corresponden al estado del libro si es ###### prestado o vendido, se desea realizar una consulta que me traiga el nombre del cliente(tabla clients), el titulo del libro(tabla books) y el ###### tipo de transacción(tabla transactions). 
-
+Este ejemplo es realizado con la sintaxis de MySQL, de todas maneras entre bases de datos SQL la sintaxis es semejante.
 1.Usar como pivote la tabla principal que sería la tabla transactions, es principal porque es de allí donde las demás tablas se relacionan.
+
 2.Relacionar las tablas book y client con transactions, para ello usaremos los *ALIAS*, en este caso son los  *as* y los *on* para unir las tablas,así:<br>
 *SELECT* <br>
 *FROM TRANSACTIONS AS T* <br>
@@ -145,6 +146,25 @@ Teniendo en cuenta la siguiente estructura
 *ON T.BOOK_ID = B.BOOK_ID* <br>
 *JOIN CLIENTS AS C* <br>
 *ON T.CLIENT_ID = C.CLIENT_ID* <br>
+
+3.¿Qué datos deseo ver? *Nombre del cliente, titulo del libro, tipo de transacción*<br>
+*SELECT c.name ,b.title,t.type* <br>
+*FROM TRANSACTIONS AS T* <br>
+*JOIN BOOKS AS B* <br>
+*ON T.BOOK_ID = B.BOOK_ID* <br>
+*JOIN CLIENTS AS C* <br>
+*ON T.CLIENT_ID = C.CLIENT_ID* <br>
+
+4.¿Qué datos deseo filtrar?
+Supongamos que el dueño de la librería pidió que de la información anterior sólo se mostraran los libros vendido y vendidos a mujeres.La consulta anterior serviría pero se tendrían que agregar unos filtros al final de la sentencia:<br>
+*SELECT c.name ,b.title,t.type* <br>
+*FROM TRANSACTIONS AS T* <br>
+*JOIN BOOKS AS B* <br>
+*ON T.BOOK_ID = B.BOOK_ID* <br>
+*JOIN CLIENTS AS C* <br>
+*ON T.CLIENT_ID = C.CLIENT_ID* <br> 
+*WHERE C.GENDER='WOMEN'*
+*AND T.TYPE IN ('SELL','LEND')*
 
 
 
