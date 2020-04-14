@@ -138,13 +138,13 @@ Teniendo en cuenta la siguiente estructura
 ###### Las tablas anteriores corresponden a una base de datos para una librería, la tabla de transacciones corresponden al estado del libro si es ###### prestado o vendido, se desea realizar una consulta que me traiga el nombre del cliente(tabla clients), el titulo del libro(tabla books) y el ###### tipo de transacción(tabla transactions). 
 
 1.Usar como pivote la tabla principal que sería la tabla transactions, es principal porque es de allí donde las demás tablas se relacionan.
-2.Relacionar las tablas book y client con transactions, para ello usaremos los *ALIAS*, en este caso son los  *as* y los *on* para unir las tablas,así:
-*SELECT* \n
-*FROM TRANSACTIONS AS T*
-*JOIN BOOKS AS B*
-*ON T.BOOK_ID = B.BOOK_ID*
-*JOIN CLIENTS AS C*
-*ON T.CLIENT_ID = C.CLIENT_ID*
+2.Relacionar las tablas book y client con transactions, para ello usaremos los *ALIAS*, en este caso son los  *as* y los *on* para unir las tablas,así:<br>
+*SELECT* <br>
+*FROM TRANSACTIONS AS T* <br>
+*JOIN BOOKS AS B* <br>
+*ON T.BOOK_ID = B.BOOK_ID* <br>
+*JOIN CLIENTS AS C* <br>
+*ON T.CLIENT_ID = C.CLIENT_ID* <br>
 
 
 
