@@ -21,31 +21,31 @@ Los objetos pueden ser físicos o conceptuales.
 - Herencia 👪 : permite la reutilización de código, ya que , a partir de la similitud entre objetos se pueden crear clases padres que pueden ser heredadas por sus hijos y así reutilizar el código. 
 
 ## Modificadores de acceso
-Las variables , métodos y objetos dentro de una clase pueden tener un rango de "seguridad", que permiten que otras clases y su misma clase sean visibles y editables o no. Los modificadores de acceso son esos niveles de seguridad y son los siguientes:
-PUBLIC --> Todas las clases tienen acceso.
-PROTECTED --> Sólo las clases, paquetes y subclases tienen acceso.
-DEFAULT --> las clases y paquetes internos.
-PRIVATE --> sólo las clases.
+Las variables , métodos y objetos dentro de una clase pueden tener un rango de "seguridad", que permiten que otras clases y su misma clase sean visibles y editables o no. Los modificadores de acceso son esos niveles de seguridad y son los siguientes:<br>
+PUBLIC --> Todas las clases tienen acceso. <br>
+PROTECTED --> Sólo las clases, paquetes y subclases tienen acceso.<br>
+DEFAULT --> las clases y paquetes internos.<br>
+PRIVATE --> sólo las clases.<br>
 
 ## Representación gráfica
 Para representar gráficamente y realizar el modelo de un sistema para posteriormente codificar, es el lenguaje unificado de modelado UML.
 La estructura básica para un objeto es un rectángulo de tres secciones así:<br>
-![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml1.png)
-Se representan teniendo en cuenta los niveles de visibilidad o modificadores de  de los métodos y atributos , los cuales se representan con los siguientes símbolos:
--private
-+public
-#protected
-~default
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml1.PNG)
+Se representan teniendo en cuenta los niveles de visibilidad o modificadores de  de los métodos y atributos , los cuales se representan con los siguientes símbolos:<br>
+-private<br>
++public<br>
+#protected<br>
+~default<br>
 Este podría ser un ejemplo muy simple: <br>
-![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml2.PNG)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml2.PNG)<br>
 Cuando existe más de un objeto, se deben agregar relaciones entre los objetos, es decir entre los recuadros dibujados se debe dibujar una línea pero el final o comienzo de ésta representará algo en específico así:
 - AGREGACIÓN: Un elemento dependerá de muchos otros, se representa con un *rombo vacío al final de la línea*.
 - COMPOSICIÓN: Un elemento dependerá de muchos otros, pero de manera comprometida, conceptualmente esto significa que una clase no puede vivir sin la otra. Se representa gráficamente como un *rombo relleno al final de la línea*.
-- ASOCIACION: este elemento contiene al otro en su definición.Apunta hacia la dependencia y se representa con una flecha sencilla de tres palos así -> .
-- HERENCIA: la flecha apunta del hijo al padre, la representación es una flecha triangular vacía.
-- DEPENDENCIA: Es una relación de significado entre dos elementos, donde cualquier cambio a un elemento independiente, puede afectar el significado de otro elemento dependiente. Se representa gráficamente como una línea discontinua en trozos y con una flecha sencilla de tres palos.
+- ASOCIACION: este elemento contiene al otro en su definición.Apunta hacia la dependencia y *se representa con una flecha sencilla de tres palos así -> .*
+- HERENCIA: la flecha apunta del hijo al padre, *la representación es una flecha triangular vacía.*
+- DEPENDENCIA: Es una relación de significado entre dos elementos, donde cualquier cambio a un elemento independiente, puede afectar el significado de otro elemento dependiente. *Se representa gráficamente como una línea discontinua en trozos y con una flecha sencilla de tres palos.*
 
-
+## Ejemplo UML
 El siguiente ejemplo es  un ejemplo de un gráfico UML para Un libro de contactos. 
 ![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml2.gif)
 
