@@ -1,5 +1,5 @@
 # PROGRAMACION ORIENTADA A OBJETOS
-La programación orientada a objetos es un paradigma* de programación que usa objetos y sus interacciones para la creación de programas informáticos, la programación orientada a objetos busca mantener un código bien estructurado no extenso, modularizado, fácil de leer y de fácil mantenimiento.
+La programación orientada a objetos es un paradigma* de programación que usa objetos y sus interacciones para la creación de programas informáticos, la programación orientada a objetos busca mantener un código bien estructurado no extenso, modularizado, fácil de leer y de fácil mantenimiento.<br>
 **Paradigma: teoría que suministra la base y modelo para resolver problemas.*
 ## Conceptos 
 - Objetos: Un objeto es la abstracción de "algo" en la vida real, el objeto describe principalmente las propiedades(atributos) y el comportamiento(métodos) de ese "algo".También se le conoce como la instancia de una clase.
@@ -30,7 +30,7 @@ PRIVATE --> sólo las clases.<br>
 ## Representación gráfica
 Para representar gráficamente y realizar el modelo de un sistema para posteriormente codificar, es el lenguaje unificado de modelado UML.
 La estructura básica para un objeto es un rectángulo de tres secciones así:<br>
-![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml1.PNG)
+![](https://github.com/innacroft/Teoria_temas/blob/master/images/uml1.PNG)<br>
 Se representan teniendo en cuenta los niveles de visibilidad o modificadores de  de los métodos y atributos , los cuales se representan con los siguientes símbolos:<br>
 -private<br>
 +public<br>
