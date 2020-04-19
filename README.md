@@ -1,5 +1,6 @@
 ### Teoría básica
 ✒️  ✏️  📄
+<br>
 Con el fin de que estos conceptos no se queden en hojas de papel, quise materializarlos en estas páginas para tener un acceso fácil a los mismos , además que podría funcionarle a alguien más 😊.
 #### Teoría de los siguientes temas
 - Fundamentos de bases de datos relacionales (FundamentosBasesDatos.md)
