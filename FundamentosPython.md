@@ -1,5 +1,11 @@
-# PROGRAMACION ORIENTADA A OBJETOS
-La programación orientada a objetos es un paradigma* de programación que usa objetos y sus interacciones para la creación de programas informáticos, la programación orientada a objetos busca mantener un código bien estructurado no extenso, modularizado, fácil de leer y de fácil mantenimiento.<br>
+# PYTHON 
+Python es un lenguaje de programación interpretado creado por Guido van Rossum. Las características principales de python son:<br>
+- Legible: sintaxis intuitiva y estricta.
+- Productivo: ahorra mucho código.
+- Portable: compatible con todos los Sistemas Operativos.
+- Recargado: viene con muchas librerías disponibles por defecto para su uso.
+
+
 **Paradigma: teoría que suministra la base y modelo para resolver problemas.*
 ## Conceptos 
 - Objetos: Un objeto es la abstracción de "algo" en la vida real, el objeto describe principalmente las propiedades(atributos) y el comportamiento(métodos) de ese "algo".También se le conoce como la instancia de una clase.
